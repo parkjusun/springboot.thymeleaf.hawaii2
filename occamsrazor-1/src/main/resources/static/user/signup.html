@@ -83,11 +83,11 @@ footer {
   </nav>
   
   <article>
-   <form action="#">
+   <form >
    	<label>NAME </label> <br>
    	<input id="name" type="text"/> <br>
    	<label>ID</label><br>
-   	<input id="userid" type="text"/><input id="idsearch" type="button" value="중복확인" /> <br>
+   	<input id="userid" type="text"/><br>
    	<label>PASSWORD</label><br>
    	<input id="passwd" type="text"/><br>
    	<label>SSN</label><br>
@@ -111,8 +111,7 @@ $('#home_a')
 	e.preventDefault()
 	location.href = "../index.html"
 })
-$('#join_button')
-	.click(e=> {
+$('#join_button').click(e=> {
 	e.preventDefault()
 	$.ajax({
 		url: '/user/join',
@@ -126,6 +125,7 @@ $('#join_button')
 		dataType: 'json',
 		contentType: 'application/json',
 		success: d =>{
+			console.log('JOIN RESULT :: '+d)
 			if(d === 'SUCCESS'){
 				location.href = 'signin.html'
 			}else{
