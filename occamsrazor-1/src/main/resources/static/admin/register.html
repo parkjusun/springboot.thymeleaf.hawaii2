@@ -40,8 +40,8 @@
                 <input id="search_button" style="width:150px;height:50px;float:left;margin-left:50px;background-color: #80003e; color: white" type="button" value="검색"> <br>
             </td>
             <td>
-                <a id="login_a" style="cursor:pointer;text-decoration: underline">회원가입</a>
-                <a id="join_a" style="cursor:pointer;text-decoration: underline">로그인</a>
+                <a id="join_a" style="cursor:pointer;text-decoration: underline">회원가입</a>
+                <a id="login_a" style="cursor:pointer;text-decoration: underline">로그인</a>
                 <a id="register_a" style="cursor:pointer;text-decoration: underline">관리자 등록</a>
                 <a id="access_a" style="cursor:pointer;text-decoration: underline">관리자 접속</a>
                 
@@ -53,33 +53,59 @@
         </tr>
         <tr>
             <td id="content" colspan="4">
-                <img src="http://www.cdc.go.kr/cdc/img/main/visual_default_main_01.jpg">
-            </td>
-        </tr>
-        <tr id="menu_2">
-            <td>
-                <img src="http://www.cdc.go.kr/cdc/img/main/visual_default_05.jpg">
-                <h3>미세먼지 건강 수칙</h3>
-            </td>
-            <td>
-                <img src="http://www.cdc.go.kr/cdc/img/main/visual_default_12.png">
-                <h3>법정 감염병 분류 체계 개편</h3>
-            </td>
-            <td>
-                <img src="http://www.cdc.go.kr/cdc/img/main/visual_default_10.jpg">
-                <h3>인플루엔자</h3>
-            </td>
-            <td>
-                <img src="http://www.cdc.go.kr/cdc/img/main/visual_default_08.jpg">
-                <h3>액상형 전자담배관련 폐손상</h3>
+                <table id="admin" style="width: 80%; height:80%; margin: 0 auto">
+			    <tr style="width: 80%;height: 50px;">
+			      <td rowspan="4">
+			        <img src="https://u5b8t9w6.stackpathcdn.com/wp-content/uploads/2014/12/profile-default-300x242.jpg">
+			      </td>
+			      <td style="height: 20%">
+			        <label>이름</label>
+			      </td>
+			      <td>
+			        <input id="name" type="text" />
+			      </td>
+			    </tr>  
+			    <tr style="height: 20%">
+			      <td >
+			        <label>직급</label>
+			      </td>
+			      <td>
+			        <input id="position" type="text" />
+			      </td>
+			    </tr>
+			    <tr style="height: 20%">
+			      <td>
+			        <label>이메일</label>
+			      </td>
+			      <td>
+			        <input id="email" type="text" />
+			      </td>
+			    </tr>
+			    <tr style="height: 20%">
+			      <td>
+			        <label>전화번호</label>
+			      </td>
+			      <td>
+			        <input id="phoneNumber" type="text" />
+			      </td>
+			    </tr>
+			    <tr style="height: 20%">
+			      <td colspan="3">
+			        <input id="userid" type="button" value="등록하기" style="width: 200px; height: 100px;font-size: 30px;"/>
+			        <input id="userid" type="button" value="취소하기" style="width: 200px; height: 100px;margin-left: 50px;font-size: 30px;"/>
+			      </td>
+			    </tr>
+			  </table>
             </td>
         </tr>
     </table>
  <script>
+ 
      $('#kcdc').css({ width: '80%', height: '900px' }).addClass('border_black center')
      $('#tr_1').css({ width: '80%', height: '50px' }).addClass('border_black center')
      $('#menu').css({ width: '80%', height: '50px' }).addClass('border_black center')
      $('#kcdc td').addClass('border_black', 'width_full')
+     $('#login_a').css({color: 'skyblue'})
      $('#register_a').click(e=>{
      	e.preventDefault()
      	location.href = "admin/register.html"
