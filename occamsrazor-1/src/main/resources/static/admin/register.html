@@ -114,12 +114,12 @@
      	$.ajax({
      		url : '/admins',
      		type : 'post',
-     		data : {
+     		data : JSON.stringify({
      			name : $('#name').val(),
      			position : $('#position').val(),
      			email : $('#email').val(),
      			phoneNumber : $('#phoneNumber').val()
-     		},
+     		}),
      		dataType : 'json',
      		contentType : 'application/json',
      		success : d => {

@@ -1,5 +1,8 @@
 package com.occamsrazor.web.admin;
 
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,21 +18,23 @@ public class AdminServiceImpl implements AdminService{
 		/*
 		 employNumber, passwd ,name , position, profile, email, phoneNumber, registerDate;
 		 * */
-		System.out.println(admin);
+		System.out.println("2. AdminServiceImpl register "+admin);
 		admin.setEmployNumber(createEmployNumber());
 		admin.setPasswd("1");
 		admin.setRegisterDate(createCurrentDate());
 		adminDao.insert(admin);
-		
 	}
 
 	private String createCurrentDate() {
-		// TODO Auto-generated method stub
-		return null;
+		return new SimpleDateFormat("yyyy-MM-dd").format(new Date());
 	}
 
 	private String createEmployNumber() {
-		return null;
+		String startNum = "";
+		for(int i=0;i < 4;i++) {
+			startNum += String.valueOf((int)(Math.random()*10));
+		}
+		return startNum;
 	}
 
 	@Override
