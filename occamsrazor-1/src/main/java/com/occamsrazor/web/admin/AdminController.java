@@ -31,7 +31,7 @@ public class AdminController {
 	public List<Admin> list(){
 		return adminService.findAll();
 	}
-	@GetMapping("/{employNumber}")
+	@GetMapping("/{employNumber}")  
 	public Admin detail(@PathVariable String employNumber) {
 		return adminService.findOne(employNumber);
 	}

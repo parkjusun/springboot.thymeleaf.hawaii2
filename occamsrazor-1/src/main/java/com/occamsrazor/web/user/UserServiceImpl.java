@@ -16,11 +16,13 @@ import javax.swing.JOptionPane;
 
 import java.util.Set;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UserServiceImpl implements UserService{
 
+		@Autowired UserDao userDao;
 
 
 }
