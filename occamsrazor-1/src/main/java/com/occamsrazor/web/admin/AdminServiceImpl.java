@@ -12,8 +12,24 @@ public class AdminServiceImpl implements AdminService{
 	
 	@Override
 	public void register(Admin admin) {
+		/*
+		 employNumber, passwd ,name , position, profile, email, phoneNumber, registerDate;
+		 * */
+		System.out.println(admin);
+		admin.setEmployNumber(createEmployNumber());
+		admin.setPasswd("1");
+		admin.setRegisterDate(createCurrentDate());
 		adminDao.insert(admin);
 		
+	}
+
+	private String createCurrentDate() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private String createEmployNumber() {
+		return null;
 	}
 
 	@Override
