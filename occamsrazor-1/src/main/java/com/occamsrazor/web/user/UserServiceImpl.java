@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public void add(User user) {
 		try {
-			File file = new File(Data.USER_PATH.toString()+Data.LIST+Data.CSV.toString());
+			File file = new File(Data.USER_PATH.toString()+Data.LIST+Data.CSV);
 			@SuppressWarnings("resource")
 			BufferedWriter writer = new BufferedWriter(new FileWriter(file, true));
 					String message = user.toString();
