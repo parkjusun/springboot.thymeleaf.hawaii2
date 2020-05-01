@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.annotation.processing.Messager;
 
+import org.apache.coyote.http11.Http11AprProtocol;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,9 +19,10 @@ import com.occamsrazor.web.util.Messenger;
 
 @RestController
 @RequestMapping("/admins")
-public class AdminController {
+public class AdminController{
 	
 	@Autowired AdminService adminService;
+	@Autowired Admin admin;
 	
 	@PostMapping("")
 	public Messenger post(@RequestBody Admin admin) {
@@ -35,6 +37,7 @@ public class AdminController {
 	}
 	@GetMapping("/{employNumber}")  
 	public Admin detail(@PathVariable String employNumber) {
+		admin.setEmployNumber(employNumber);
 		return adminService.findOne(employNumber);
 	}
 	@PutMapping("/{employNumber}")
