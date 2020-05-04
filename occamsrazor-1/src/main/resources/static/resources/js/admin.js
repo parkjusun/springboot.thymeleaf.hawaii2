@@ -12,26 +12,27 @@ admin = (() => {
 			$.each(d, (i, j) => {
 				$(`<tr>
                         	<td>
-                                <span>1</span>
+                                <span>${i+1}</span>
                             </td>
                             <td>
-                                <span>1</span>
+                                <span>${j.userid}</span>
+                            </td>
+                            <td>
+                                <span>${j.name}</span>
                             </td>
                              <td>
-                                <span>1</span>
+                                <span>${j.ssn}</span>
                             </td>
                            <td>
-                                <span>1</span>
+                                <span>${j.email}</span>
                             </td>
                             <td>
-                                <span>1</span>
+                                <span>${j.phoneNumber}</span>
                             </td>
                             <td>
-                                <span>1</span>
+                                <span>${j.registerDate}</span>
                             </td>
-                            <td>
-                                <span>1</span>
-                            </td>
+                            
                         </tr>`).appendTo('#userData')
 			})
 		})
