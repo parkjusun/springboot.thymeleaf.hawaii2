@@ -36,9 +36,39 @@ user = (()=>{
 		    	 e.preventDefault()
 		    	 $('#content').empty()
 		    	 $('#content').html(adminVue.login())
+		    	 $(`<input type="button" >`)
+		    	 .attr({value:"로그인"})
+		    	 .appendTo('#login_box')
+		    	 .click(e=>{
+		    		 e.preventDefault()
+		    		 location.href = "/admin"
+		    		 /*$.ajax({
+		    			 url : ``,
+		    			 type : `post`,
+		    			 data : JSON.stringify({
+		    				 
+		    			 }),
+		    			 dataType : `json`,
+		    			 contentType : `application/json`,
+		    			 success : d => {
+		    				// location.href = "/admin"
+		    			 },
+		    			 error : (r, x, e) => {
+		    				 alert(r)
+		    			 }
+		    		 }) */
+		    	 })
+				 $(`<input type="button">`)
+				 .attr({value:"취소"})
+				 .appendTo('#login_box')
+				 .click(e => {
+					 e.preventDefault()
+				 })
+				   	
 		    	 
 		    	 
-			    // location.href = "/admin"
+		    	 
+			    
 		    	})
 		}).fail(()=>{
 			alert(WHEN_ERROR)

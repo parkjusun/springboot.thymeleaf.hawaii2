@@ -53,14 +53,12 @@ const adminVue = {
 		login : ()=>{
 			return `
 				<article>
-				   <form action="#">
+				   <form id="login_box">
 				   	<label>ID </label> <br>
 				   	<input id="userid" type="text"> <br>
 				   	<label>PASSWORD</label><br>
 				   	<input id="passwd" type="text"><br>
-				   	<input id="login_button" type="button" value="로그인">
-				   	<input id="cancel_button" type="button" value="취소">
-				   	
+				   
 				   </form>
 				  </article>
 			`
