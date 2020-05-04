@@ -21,6 +21,7 @@ import com.occamsrazor.web.util.Messenger;
 @RestController
 @RequestMapping("/users")
 public class UserController {
+	
 
 }
 
