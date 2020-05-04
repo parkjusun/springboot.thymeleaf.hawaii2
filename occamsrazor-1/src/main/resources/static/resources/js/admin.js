@@ -18,7 +18,7 @@ admin = (() => {
                                 <span>${j.userid}</span>
                             </td>
                             <td>
-                                <span>${j.name}</span>
+                                <span id="user_`+(i+1)+`"></span>
                             </td>
                              <td>
                                 <span>${j.ssn}</span>
@@ -34,8 +34,16 @@ admin = (() => {
                             </td>
                             
                         </tr>`).appendTo('#userData')
-			})
-		})
+                        
+                        $(`<a>${j.name}</a>`)
+                        .css({cursor: 'pointer',color: 'blue'})
+                        .appendTo("#user_"+(i+1))
+                        .click(e => {
+                        	alert(`${j.userid}`)
+                        })
+                        
+			}) // each
+		}) // getJSON
 	}
 	let setContentView = () => {
 		$('#userData tr').first().css({'background-color':'yellow'})
@@ -43,3 +51,8 @@ admin = (() => {
 	return {init}
 	
 })()
+
+
+
+
+
