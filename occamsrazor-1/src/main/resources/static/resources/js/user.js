@@ -32,9 +32,14 @@ user = (()=>{
 		     	
 		     })
 		     $('#access_a').click(e=>{
+		    	 alert('접소오옥')
 		    	 e.preventDefault()
-			     location.href = "/admin"
-		     })
+		    	 $('#content').empty()
+		    	 $('#content').html(adminVue.login())
+		    	 
+		    	 
+			    // location.href = "/admin"
+		    	})
 		}).fail(()=>{
 			alert(WHEN_ERROR)
 		})
