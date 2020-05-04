@@ -22,6 +22,15 @@ import com.occamsrazor.web.util.Messenger;
 @RequestMapping("/users")
 public class UserController {
 	
+	@Autowired UserService userService;
+	
+	@GetMapping("")
+	public List<User> list(){
+		return userService.findAll();
+	}
+	
+	
+	
 
 }
 
