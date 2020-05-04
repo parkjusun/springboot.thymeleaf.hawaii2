@@ -9,6 +9,7 @@ admin = (() => {
 	let onCreate = () => {
 		setContentView()
 		$.getJSON('/users', d => {
+			$('#total_count').text('총회원수  : '+d.length)
 			$.each(d, (i, j) => {
 				$(`<tr>
                         	<td>
